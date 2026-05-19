@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SQUARE CAT - Agencia Boutique de Management para creadoras de contenido en Fansly y Pornhub. 100% de éxito garantizado.">
+    <title>SQUARE CAT | Agencia Boutique</title>
+    <style>
+        /* Estilos Base Minimalistas */
+        :root {
+            --bg-color: #000000;
+            --text-color: #FFFFFF;
+            --accent-color: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 {
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        a:hover {
+            opacity: 0.7;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 0;
+        }
+
+        /* Navegación */
+        nav {
+            padding: 30px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--accent-color);
+        }
+
+        .logo-nav img {
+            height: 50px;
+            object-fit: contain;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            letter-spacing: 5px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 40px;
+            color: #AAAAAA;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            border: 1px solid var(--text-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-color);
+            border: 1px solid var(--text-color);
+            margin-top: 20px;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+        }
+
+        /* Stats / Filosofía */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            color: #AAAAAA;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Modelos Section */
+        .models-section {
+            background-color: #050505;
+            border-top: 1px solid var(--accent-color);
+            border-bottom: 1px solid var(--accent-color);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 2rem;
+        }
+
+        .models-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .model-card {
+            position: relative;
+            background-color: var(--accent-color);
+            height: 400px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .model-card:hover {
+            transform: scale(1.02);
+        }
+
+        /* Placeholder para imágenes de modelos con filtro blanco y negro */
+        .model-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%) contrast(120%);
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+
+        .model-card:hover .model-img {
+            opacity: 1;
+        }
+
+        .model-info {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        /* Formulario de Contacto */
+        .apply-section {
+            text-align: center;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #AAAAAA;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 15px;
+            background-color: #0a0a0a;
+            border: 1px solid var(--accent-color);
+            color: var(--text-color);
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--text-color);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            border-top: 1px solid var(--accent-color);
+            font-size: 0.8rem;
+            color: #666;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .models-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 480px) {
+            .models-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-nav">
+            <!-- La imagen del logo debe estar en la misma carpeta como SQ.jpg -->
+            <img src="SQ.jpg" alt="SQUARE CAT LOGO" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span style="display:none; font-size: 1.5rem; letter-spacing: 3px; font-weight: bold; text-transform: uppercase;">SQUARE CAT</span>
+        </div>
+        <div>
+            <a href="#apply" class="btn" style="padding: 10px 20px; font-size: 0.8rem;">Postular</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Élite & Exclusividad</h1>
+        <p>Agencia Boutique de Management Digital. IA y SEO avanzado para llevar tu facturación en Fansly y Pornhub al 1% global. Solo 1 vacante disponible.</p>
+        <a href="#apply" class="btn">Aplicar a la Vacante</a>
+    </header>
+
+    <section class="container">
+        <div class="section-title">
+            <h2>Nuestra Garantía</h2>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>3</h3>
+                <p>Modelos Máximo<br>(Gestión 1:1)</p>
+            </div>
+            <div class="stat-item">
+                <h3>SEO</h3>
+                <p>Tráfico Orgánico<br>Inteligencia Artificial</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Tasa de Éxito<br>en Escalabilidad</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="models-section" id="models">
+        <div class="container">
+            <div class="section-title">
+                <h2>Roster Histórico</h2>
+                <p style="color: #AAAAAA; font-size: 0.9rem; margin-top: 10px;">El nivel de excelencia que manejamos. 4 talentos, facturación comprobada.</p>
+            </div>
+            <div class="models-grid">
+                <!-- Modelo 1 -->
+                <div class="model-card">
+                    <!-- Reemplazar src con imagen real en blanco y negro -->
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Modelo 1" class="model-img">
+                    <div class="model-info">Talento 01</div>
+                </div>
+                <!-- Modelo 2 -->
+                <div class="model-card">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=500&q=80" alt="Modelo 2" class="model-img">
+                    <div class="model-info">Talento 02</div>
+                </div>
+                <!-- Modelo 3 (Gienna) -->
+                <div class="model-card">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=500&q=80" alt="Modelo 3" class="model-img">
+                    <div class="model-info">Talento 03</div>
+                </div>
+                <!-- Modelo 4 -->
+                <div class="model-card">
+                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=500&q=80" alt="Modelo 4" class="model-img">
+                    <div class="model-info">Talento 04</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container apply-section" id="apply">
+        <div class="section-title">
+            <h2>Auditoría de Perfil</h2>
+            <p style="color: #AAAAAA; font-size: 0.9rem; margin-top: 10px;">Filtro de Selección 2026. Llena el formulario y evaluaremos tu potencial.</p>
+        </div>
+        
+        <div class="form-container">
+            <!-- La acción del formulario se conecta a Formspree (gratuito, sin base de datos) -->
+            <!-- INSTRUCCIÓN: Cambiar 'https://formspree.io/f/TU_ID_AQUI' por tu link real de Formspree -->
+            <form action="https://formspree.io/f/mbdbdobo" method="POST">
+                
+                <div class="form-group">
+                    <label for="nombre">Alias / Nombre Artístico</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej: Gienna">
+                </div>
+
+                <div class="form-group">
+                    <label for="redes">Link de Instagram o X (Twitter)</label>
+                    <input type="url" id="redes" name="redes" required placeholder="https://instagram.com/...">
+                </div>
+
+                <div class="form-group">
+                    <label for="nivel">Nivel de Contenido Dispuesto a Crear</label>
+                    <select id="nivel" name="nivel" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="Soft">Solo Soft (Lencería/Sugerente)</option>
+                        <option value="Medio">Medio (Desnudo Artístico)</option>
+                        <option value="Intenso">Intenso (Contenido Explícito Audiovisual)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="experiencia">¿Tienes cuenta en Fansly o Pornhub actualmente?</label>
+                    <select id="experiencia" name="experiencia" required>
+                        <option value="Si">Sí, ya tengo contenido</option>
+                        <option value="No">No, quiero empezar desde cero</option>
+                        <option value="Solo_OF">Solo tengo OnlyFans</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="motivo">¿Por qué quieres trabajar con una Agencia Boutique?</label>
+                    <textarea id="motivo" name="motivo" rows="4" required placeholder="Cuéntanos sobre tu visión a futuro..."></textarea>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%;">Enviar Postulación</button>
+            </form>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <p style="color: #AAAAAA; font-size: 0.9rem; margin-bottom: 15px;">¿Dudas rápidas? Contáctanos directamente.</p>
+                <!-- INSTRUCCIÓN: Cambiar el link por tu usuario real de X o Telegram -->
+                <a href="https://x.com/tu_usuario" target="_blank" class="btn btn-outline">Mensaje Directo en X</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 SQUARE CAT AGENCY. Todos los derechos reservados.</p>
+        <p style="margin-top: 5px;">Management Boutique & SEO Digital.</p>
+    </footer>
+
+</body>
+</html>
